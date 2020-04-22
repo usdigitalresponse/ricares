@@ -1,0 +1,20 @@
+{
+  "name": "gatsby-stimulus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.20.29",
+    "gatsby-cli": "^2.11.15",
+    "gatsby-source-airtable": "^2.1.0",
+    "gatsby-source-filesystem": "^2.2.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
