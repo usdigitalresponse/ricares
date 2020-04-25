@@ -9,7 +9,8 @@ export default ({ data }) => {
       <div>
         <Link to="/">
           <p className="navigation">
-            <img src={"/back-icon.svg"} height="15" /> Back
+            <img src={"/back-icon.svg"} height="15" alt="Back Arrow Icon" />{" "}
+            Back
           </p>
         </Link>
         <h1>{report.Number_Request}</h1>
