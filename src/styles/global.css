@@ -21,6 +21,19 @@ html {
     width: 66%;
 }
 
+.pdf-button {
+    padding: 0.25rem;
+    display: inline-flex;
+    margin-bottom: 0 !important;
+    align-items: center;
+    float: right
+}
+
+.pdf-button-img {
+    display: flex;
+    margin-bottom: 0 !important;
+    align-items: center;
+}
 
 @media print {
     .navigation {

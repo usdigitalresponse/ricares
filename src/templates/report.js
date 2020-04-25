@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import printJS from "print-js";
 
 export default ({ data }) => {
   const report = data.airtable.data;
@@ -9,63 +10,28 @@ export default ({ data }) => {
       <div>
         <Link to="/">
           <p className="navigation">
-            <img src={"/back-icon.svg"} height="15" alt="Back Arrow Icon" />{" "}
+            <img src={"/back-icon.svg"} height="16" alt="Back Arrow Icon" />{" "}
             Back
           </p>
         </Link>
-        <h1>{report.Number_Request}</h1>
-        <dl>
-          <dt>Date Requested</dt>
-          <dd>{report.Date}</dd>
-
-          <dt>Agency</dt>
-          <dd>{report.State_Agency}</dd>
-
-          <dt>State Program</dt>
-          <dd>{report.State_COVID_Program_Name}</dd>
-
-          <dt>State COVID Program Funding Purpose</dt>
-          <dd>{report.COVID_Program_Funding_Purpose}</dd>
-
-          <dt>Funding Type</dt>
-          <dd>{report.Funding_Type}</dd>
-
-          <dt>Total Funding Amount</dt>
-          <dd>$ {report.Funding_Amount.toLocaleString()}</dd>
-
-          <dt>Match Amount</dt>
-          <dd>{report.Match_Amount}</dd>
-
-          <dt>Number of New FTEs to be Hired</dt>
-          <dd>
-            {report.Number_of_New_FTEs_to_be_Hired_to_Implement_the_Award}
-          </dd>
-
-          <dt>Number of New Contract Employees to be Hired</dt>
-          <dd>
-            {
-              report.Number_of_New_Contract_Employees_to_be_Hired_to_Implement_Award
-            }
-          </dd>
-
-          <dt>Maintenance of Effort Statutory Provision</dt>
-          <dd>{report.Maintenance_of_Effort_Statutory_Provision}</dd>
-
-          <dt>Statutory Changes Needed</dt>
-          <dd>{report.Describe_any_Statutory_Changes_Needed}</dd>
-
-          <dt>Regulatory Changes Needed</dt>
-          <dd>{report.Describe_any_Regulatory_Changes_Needed}</dd>
-
-          <dt>Expenditure Begin Date</dt>
-          <dd>{report.Expenditure_Eligibility_Begin_Date}</dd>
-
-          <dt>Expenditure End Date</dt>
-          <dd>{report.Expenditure_Eligibility_End_Date}</dd>
-        </dl>
+        <button className="pdf-button" type="button" onClick={handleClick}>
+          Print to PDF&nbsp;
+          <img
+            className="pdf-button-img"
+            src={"/pdf.svg"}
+            height="32"
+            alt="Print to PDF"
+          />
+        </button>
+        <ReportContent report={report} />
       </div>
     </Layout>
   );
+};
+
+const handleClick = (e) => {
+  e.preventDefault();
+  printJS({ printable: "reportContent", type: "html" });
 };
 
 export const query = graphql`
@@ -125,3 +91,54 @@ export const query = graphql`
     }
   }
 `;
+
+const ReportContent = ({ report }) => (
+  <div id="reportContent">
+    <h1>{report.Number_Request}</h1>
+    <dl>
+      <dt>Date Requested</dt>
+      <dd>{report.Date}</dd>
+
+      <dt>Agency</dt>
+      <dd>{report.State_Agency}</dd>
+
+      <dt>State Program</dt>
+      <dd>{report.State_COVID_Program_Name}</dd>
+
+      <dt>State COVID Program Funding Purpose</dt>
+      <dd>{report.COVID_Program_Funding_Purpose}</dd>
+
+      <dt>Funding Type</dt>
+      <dd>{report.Funding_Type}</dd>
+
+      <dt>Total Funding Amount</dt>
+      <dd>$ {report.Funding_Amount.toLocaleString()}</dd>
+
+      <dt>Match Amount</dt>
+      <dd>{report.Match_Amount}</dd>
+
+      <dt>Number of New FTEs to be Hired</dt>
+      <dd>{report.Number_of_New_FTEs_to_be_Hired_to_Implement_the_Award}</dd>
+
+      <dt>Number of New Contract Employees to be Hired</dt>
+      <dd>
+        {report.Number_of_New_Contract_Employees_to_be_Hired_to_Implement_Award}
+      </dd>
+
+      <dt>Maintenance of Effort Statutory Provision</dt>
+      <dd>{report.Maintenance_of_Effort_Statutory_Provision}</dd>
+
+      <dt>Statutory Changes Needed</dt>
+      <dd>{report.Describe_any_Statutory_Changes_Needed}</dd>
+
+      <dt>Regulatory Changes Needed</dt>
+      <dd>{report.Describe_any_Regulatory_Changes_Needed}</dd>
+
+      <dt>Expenditure Begin Date</dt>
+      <dd>{report.Expenditure_Eligibility_Begin_Date}</dd>
+
+      <dt>Expenditure End Date</dt>
+      <dd>{report.Expenditure_Eligibility_End_Date}</dd>
+    </dl>
+  </div>
+);
