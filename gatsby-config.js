@@ -8,8 +8,13 @@ const {
 } = process.env;
 
 module.exports = {
-  // In gatsby-config.js
   plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     {
       resolve: `gatsby-source-airtable`,
       options: {

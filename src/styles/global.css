@@ -1,1 +1,29 @@
 /* global.css */
+
+html {
+    background-color: whitesmoke;
+}
+
+.menu {
+    background-color: #9f392b;
+    padding: 1rem 0px;
+}
+
+.menu-content {
+    margin: auto;
+    width: 66%;
+    color: whitesmoke;
+}
+
+.container {
+    padding: 2rem 0px;
+    margin: auto;
+    width: 66%;
+}
+
+
+@media print {
+    .navigation {
+        display: none !important;
+    }
+}
