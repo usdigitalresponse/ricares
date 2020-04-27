@@ -1,0 +1,15 @@
+# https://ericjinks.com/blog/2019/netlify-scheduled-build/
+name: Trigger Netlify Build
+on:
+    schedule:
+        # Run on the hour
+        - cron: '0 * * * *'
+jobs:
+    build:
+        name: Request Netlify Webhook
+        runs-on: ubuntu-latest
+        steps:
+        - name: Curl request
+            run: curl -X POST -d {} "$NETLIFY_BUILD_HOOK"
+            env: # Or as an environment variable
+                super_secret: ${{ secrets.NETLIFY_BUILD_HOOK }}

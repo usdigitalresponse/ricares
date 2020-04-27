@@ -15,6 +15,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <h1>Current Funding Requests</h1>
       <DataTable data={nodes} columns={columns} noHeader={true} />
+      <small>Last updated at: {data.siteBuildMetadata.buildTime}</small>
     </Layout>
   );
 };
@@ -30,6 +31,9 @@ export const query = graphql`
           State_Agency
         }
       }
+    }
+    siteBuildMetadata {
+      buildTime(formatString: "MMMM DD YYYY, hh:mm a", locale: "en-US")
     }
   }
 `;
