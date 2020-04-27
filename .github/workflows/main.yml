@@ -10,6 +10,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Curl request
-            run: curl -X POST -d {} "$NETLIFY_BUILD_HOOK"
-            env: # Or as an environment variable
-                super_secret: ${{ secrets.NETLIFY_BUILD_HOOK }}
+          run: curl -X POST -d {} "$NETLIFY_BUILD_HOOK"
+          env: # Or as an environment variable
+            super_secret: ${{ secrets.NETLIFY_BUILD_HOOK }}
