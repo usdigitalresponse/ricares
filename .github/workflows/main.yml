@@ -12,4 +12,4 @@ jobs:
         - name: Curl request
           run: curl -X POST -d {} "$NETLIFY_BUILD_HOOK"
           env: # Or as an environment variable
-            super_secret: ${{ secrets.NETLIFY_BUILD_HOOK }}
+            NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
