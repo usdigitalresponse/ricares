@@ -21,6 +21,11 @@ html {
     width: 66%;
 }
 
+.coat-of-arms {
+    display: block;
+    margin: 2rem auto;
+}
+
 .pdf-button {
     padding: 0.25rem;
     display: inline-flex;

@@ -31,7 +31,12 @@ export default ({ data }) => {
 
 const handleClick = (e) => {
   e.preventDefault();
-  printJS({ printable: "reportContent", type: "html" });
+  printJS({
+    printable: "reportContent",
+    type: "html",
+    style:
+      "dt { font-weight: bold; } .coat-of-arms { display: block; margin: 2rem auto;}",
+  });
 };
 
 export const query = graphql`
@@ -94,7 +99,14 @@ export const query = graphql`
 
 const ReportContent = ({ report }) => (
   <div id="reportContent">
-    <h1>{report.Number_Request}</h1>
+    <img
+      className="coat-of-arms"
+      src="/state-coa.png"
+      height="100px"
+      alt="State Coat of Arms"
+    />
+    <h1>Request for Authorization to Spend COVID Award</h1>
+    <h2>{report.Number_Request}</h2>
     <dl>
       <dt>Date Requested</dt>
       <dd>{report.Date}</dd>
