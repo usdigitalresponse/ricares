@@ -15,6 +15,7 @@
     "gatsby-plugin-typography": "^2.4.3",
     "gatsby-source-airtable": "^2.1.0",
     "gatsby-source-filesystem": "^2.2.4",
+    "moment-timezone": "^0.5.28",
     "print-js": "^1.0.63",
     "react": "^16.13.1",
     "react-data-table-component": "^6.8.0",
