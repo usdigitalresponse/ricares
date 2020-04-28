@@ -87,7 +87,6 @@ export const query = graphql`
         Financial_Reporting_Requirements
         Programmatic_Reporting_Requirements
         Date
-        Number_Request
         Award_Instrument_Type
         Date_Application__Plan__or_Formal_Request_is_Due
         Type_or_Description_of_Certification_and_Assurance
@@ -106,7 +105,7 @@ const ReportContent = ({ report }) => (
       alt="State Coat of Arms"
     />
     <h1>Request for Authorization to Spend COVID Award</h1>
-    <h2>{report.Number_Request}</h2>
+    <h2>{report.Primary_Key}</h2>
     <dl>
       <dt>Date Requested</dt>
       <dd>{report.Date}</dd>

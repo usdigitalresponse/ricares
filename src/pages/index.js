@@ -12,7 +12,7 @@ const FilterOptions = ({ agencies, currentAgency, setCurrentAgency }) => {
       setCurrentAgency(event.target.value);
     }
   };
-  const options = agencies.map(agency => (
+  const options = agencies.map((agency) => (
     <option value={agency}>{agency}</option>
   ));
   let selectValue = currentAgency;
@@ -32,11 +32,13 @@ const IndexPage = ({ data }) => {
   const [currentAgency, setCurrentAgency] = React.useState(null);
   const nodes = data.allAirtable.nodes.map((row) => ({
     id: row.id,
-    request: row.data.Number_Request,
+    request: row.data.Primary_Key,
     agency: row.data.State_Agency,
     program: row.data.State_COVID_Program_Name,
   }));
-  const filteredNodes = nodes.filter((node) => currentAgency === null || currentAgency === node.agency);
+  const filteredNodes = nodes.filter(
+    (node) => currentAgency === null || currentAgency === node.agency
+  );
   let agencies = {};
   nodes.forEach((node) => {
     agencies[node.agency] = true;
@@ -49,7 +51,11 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <h1>Current Funding Requests</h1>
-      <FilterOptions agencies={Object.keys(agencies)} currentAgency={currentAgency} setCurrentAgency={setCurrentAgency} />
+      <FilterOptions
+        agencies={Object.keys(agencies)}
+        currentAgency={currentAgency}
+        setCurrentAgency={setCurrentAgency}
+      />
       <DataTable data={filteredNodes} columns={columns} noHeader={true} />
       <small>Last updated at: {buildTime}</small>
     </Layout>
@@ -62,7 +68,7 @@ export const query = graphql`
       nodes {
         id
         data {
-          Number_Request
+          Primary_Key
           State_COVID_Program_Name
           State_Agency
         }
