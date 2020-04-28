@@ -7,7 +7,7 @@ const moment = require("moment-timezone");
 const IndexPage = ({ data }) => {
   const nodes = data.allAirtable.nodes.map((row) => ({
     id: row.id,
-    request: row.data.Number_Request,
+    request: row.data.Autonumber,
     agency: row.data.State_Agency,
     program: row.data.State_COVID_Program_Name,
   }));
@@ -31,7 +31,7 @@ export const query = graphql`
       nodes {
         id
         data {
-          Number_Request
+          Autonumber
           State_COVID_Program_Name
           State_Agency
         }
