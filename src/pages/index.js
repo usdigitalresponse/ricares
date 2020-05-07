@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allAirtable {
+    allAirtable(sort: { fields: [data___Primary_Key], order: ASC }) {
       nodes {
         id
         data {
