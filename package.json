@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.29",
-    "gatsby-cli": "^2.11.15",
+    "gatsby-cli": "^2.12.14",
     "gatsby-plugin-typography": "^2.4.3",
     "gatsby-source-airtable": "^2.1.0",
     "gatsby-source-filesystem": "^2.2.4",
@@ -25,6 +27,8 @@
     "typography": "^0.16.19",
     "typography-theme-doelger": "^0.16.19",
     "typography-theme-kirkham": "^0.16.19",
-    "typography-theme-us-web-design-standards": "^0.16.19"
-  }
+    "typography-theme-us-web-design-standards": "^0.16.19",
+    "snyk": "^1.437.0"
+  },
+  "snyk": true
 }
