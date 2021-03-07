@@ -12,12 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "gatsby": "^2.32.0",
+    "gatsby": "^2.32.8",
     "gatsby-cli": "^2.19.1",
     "gatsby-plugin-typography": "^2.12.0",
     "gatsby-source-airtable": "^2.1.1",
     "gatsby-source-filesystem": "^2.11.0",
-    "moment-timezone": "^0.5.32",
+    "moment-timezone": "^0.5.33",
     "print-js": "^1.5.0",
     "react": "^16.14.0",
     "react-data-table-component": "^6.11.6",
@@ -28,7 +28,7 @@
     "typography-theme-doelger": "^0.16.19",
     "typography-theme-kirkham": "^0.16.19",
     "typography-theme-us-web-design-standards": "^0.16.19",
-    "snyk": "^1.440.4"
+    "snyk": "^1.445.0"
   },
   "snyk": true
 }
