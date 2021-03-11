@@ -2602,3 +2602,7 @@ patch:
         patched: '2020-12-30T16:01:25.710Z'
     - gatsby > babel-eslint > @babel/traverse > @babel/generator > @babel/types > lodash:
         patched: '2020-12-30T16:01:25.710Z'
+    - gatsby > @typescript-eslint/eslint-plugin > lodash:
+        patched: '2021-03-11T19:39:15.804Z'
+    - gatsby > babel-plugin-lodash > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2021-03-11T19:39:15.804Z'
