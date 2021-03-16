@@ -28,7 +28,7 @@
     "typography-theme-doelger": "^0.16.19",
     "typography-theme-kirkham": "^0.16.19",
     "typography-theme-us-web-design-standards": "^0.16.19",
-    "snyk": "^1.445.0"
+    "snyk": "^1.483.0"
   },
   "snyk": true
 }
