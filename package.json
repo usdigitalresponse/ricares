@@ -20,7 +20,7 @@
     "moment-timezone": "^0.5.33",
     "print-js": "^1.6.0",
     "react": "^16.14.0",
-    "react-data-table-component": "^6.11.6",
+    "react-data-table-component": "^6.11.7",
     "react-dom": "^16.14.0",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.0",
