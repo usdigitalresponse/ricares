@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "gatsby": "^3.0.3",
+    "gatsby": "^3.1.0",
     "gatsby-cli": "^2.19.2",
     "gatsby-plugin-typography": "^2.12.0",
     "gatsby-source-airtable": "^2.1.1",
