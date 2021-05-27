@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "gatsby": "^3.5.0",
     "gatsby-cli": "^2.19.2",
     "gatsby-plugin-typography": "^2.12.0",
