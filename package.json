@@ -22,7 +22,7 @@
     "react": "^16.14.0",
     "react-data-table-component": "^6.11.7",
     "react-dom": "^16.14.0",
-    "react-typography": "^0.16.19",
+    "react-typography": "^0.16.20",
     "styled-components": "^5.2.3",
     "typography": "^0.16.19",
     "typography-theme-doelger": "^0.16.19",
